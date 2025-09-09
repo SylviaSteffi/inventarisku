@@ -5,7 +5,7 @@ import { BiLogOut } from "react-icons/bi";
 import { useColorMode } from "../../components/ui/color-mode";
 import { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import person from "../../assets/img/person.jpg";
+import person from "../../../public/assets/img/person.jpg";
 
 const Dashboard = () => {
   const navigate = useNavigate();

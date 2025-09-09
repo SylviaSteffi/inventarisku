@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Login from "./pages/login/login";
-import Dashboard from "./pages/dashboard/dashboard";
-import Info from "./components/info/info";
-import Pengguna from "./components/pengguna/pengguna";
-import Profil from "./components/profil/profil";
-import PenggunaCreate from "./components/pengguna/penggunacreate";
-import PenggunaUpdate from "./components/pengguna/penggunaupdate";
+import Login from "./script/pages/login/login";
+import Dashboard from "./script/pages/dashboard/dashboard";
+import Info from "./script/components/info/info";
+import Pengguna from "./script/components/pengguna/pengguna";
+import Profil from "./script/components/profil/profil";
+import PenggunaCreate from "./script/components/pengguna/penggunacreate";
+import PenggunaUpdate from "./script/components/pengguna/penggunaupdate";
 
 const App = () => {
   return (

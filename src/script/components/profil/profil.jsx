@@ -1,6 +1,6 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import { useState } from "react";
-import person from "../../assets/img/person.jpg";
+import person from "../../../public/assets/img/person.jpg";
 import { useEffect } from "react";
 
 const Profil = () => {
