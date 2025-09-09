@@ -16,7 +16,7 @@ const Pengguna = () => {
   const [user, setUser] = useState([]);
   const navigate = useNavigate();
   const fetchDataPengguna = async () => {
-    const url = "http://localhost/codebackendweb/selectpengguna.php";
+    const url = "http://localhost:3000/pengguna";
     const response = await axios.get(url);
     setUser(response.data.DATA);
   };
@@ -26,7 +26,7 @@ const Pengguna = () => {
   }, []);
 
   const handleHapus = async (id) => {
-    const url = `http://localhost/codebackendweb/deletepengguna.php?id=${id}`;
+    const url = `http://localhost:3000/hapuspengguna/${id}`;
 
     try {
       const response = await axios.get(url);

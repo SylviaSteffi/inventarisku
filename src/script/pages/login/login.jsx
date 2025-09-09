@@ -20,7 +20,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
-    const url = "http://localhost/codebackendweb/proseslogin.php";
+    const url = "http://localhost:3000/login";
     const body = { username: username, password: password };
 
     try {

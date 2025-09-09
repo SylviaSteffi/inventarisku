@@ -34,7 +34,7 @@ const PenggunaUpdate = () => {
   }, []);
 
   const handleEdit = async () => {
-    const url = "http://localhost/codebackendweb/updatepengguna.php";
+    const url = `http://localhost:3000/pengguna/${id}`;
     const body = { username: username, password: password, nama: nama, id: id };
 
     try {

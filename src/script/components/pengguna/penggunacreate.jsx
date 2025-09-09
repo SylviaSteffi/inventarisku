@@ -19,7 +19,7 @@ const PenggunaCreate = () => {
   const navigate = useNavigate();
 
   const handleSimpan = async () => {
-    const url = "http://localhost/codebackendweb/insertpengguna.php";
+    const url = "http://localhost:3000/pengguna";
     const body = { username: username, password: password, nama: nama };
 
     try {
