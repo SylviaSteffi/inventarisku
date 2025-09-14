@@ -22,11 +22,11 @@ const PenggunaUpdate = () => {
   const navigate = useNavigate();
 
   const fetchDataPengguna = async () => {
-    const url = `http://localhost/codebackendweb/selectonepengguna.php?id=${id}`;
+    const url = `http://localhost:3000/pengguna/${id}`;
     const response = await axios.get(url);
-    setUsername(response.data.DATA[0].username);
-    setPassword(response.data.DATA[0].password);
-    setNama(response.data.DATA[0].nama);
+    setUsername(response.data[0].username);
+    setPassword(response.data[0].password);
+    setNama(response.data[0].nama);
   };
 
   useEffect(() => {
@@ -34,12 +34,12 @@ const PenggunaUpdate = () => {
   }, []);
 
   const handleEdit = async () => {
-    const url = `http://localhost:3000/pengguna/${id}`;
+    const url = `http://localhost:3000/editpengguna/${id}`;
     const body = { username: username, password: password, nama: nama, id: id };
 
     try {
-      const response = await axios.post(url, body);
-      if (response.data.STATUS === "BERHASIL") {
+      const response = await axios.put(url, body);
+      if (response.status === 200) {
         navigate("/dashboard/pengguna");
       } else {
         ShowToast("INFO", "Simpan Gagal");

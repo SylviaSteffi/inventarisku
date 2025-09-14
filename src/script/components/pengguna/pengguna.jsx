@@ -18,7 +18,7 @@ const Pengguna = () => {
   const fetchDataPengguna = async () => {
     const url = "http://localhost:3000/pengguna";
     const response = await axios.get(url);
-    setUser(response.data.DATA);
+    setUser(response.data);
   };
 
   useEffect(() => {
@@ -29,8 +29,8 @@ const Pengguna = () => {
     const url = `http://localhost:3000/hapuspengguna/${id}`;
 
     try {
-      const response = await axios.get(url);
-      if (response.data.STATUS === "BERHASIL") {
+      const response = await axios.put(url);
+      if (response.status === 200) {
         navigate("/dashboard/pengguna");
       } else {
         ShowToast("INFO", "Hapus Gagal");

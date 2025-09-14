@@ -24,7 +24,7 @@ const PenggunaCreate = () => {
 
     try {
       const response = await axios.post(url, body);
-      if (response.data.STATUS === "BERHASIL") {
+      if (response.status === 200) {
         navigate("/dashboard/pengguna");
       } else {
         navigate("dashboard/pengguna/tambah");
